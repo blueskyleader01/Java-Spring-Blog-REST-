@@ -12,4 +12,5 @@ public interface PostRepository extends JpaRepository<Post, Long>{
     //for search post by title, in url http://localhost:8080/posts/search/findByTitleContaining?title=string
     //if don't want the path to be too long, redefine it by using @RestResource(rel="contains-title", path="containsTitle")
 
+    public List<Post> findByAuthor_Lastname(String lastname);
 };
